@@ -13,6 +13,7 @@
 		0FBD0F92298D532E00475DAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FBD0F90298D532E00475DAD /* Main.storyboard */; };
 		0FBD0F94298D532F00475DAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FBD0F93298D532F00475DAD /* Assets.xcassets */; };
 		0FBD0F97298D532F00475DAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FBD0F95298D532F00475DAD /* LaunchScreen.storyboard */; };
+		59A2D1485F6554C0F5530DCA /* Pods_Genwin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10015F0AFB725DFAF46A9E8F /* Pods_Genwin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0FBD0F93298D532F00475DAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FBD0F96298D532F00475DAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FBD0F98298D532F00475DAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10015F0AFB725DFAF46A9E8F /* Pods_Genwin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genwin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6369200B61E36C9C4CC30295 /* Pods-Genwin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genwin.debug.xcconfig"; path = "Target Support Files/Pods-Genwin/Pods-Genwin.debug.xcconfig"; sourceTree = "<group>"; };
+		7A35087B32BF58D755728020 /* Pods-Genwin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genwin.release.xcconfig"; path = "Target Support Files/Pods-Genwin/Pods-Genwin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59A2D1485F6554C0F5530DCA /* Pods_Genwin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0FBD0F89298D532E00475DAD /* Genwin */,
 				0FBD0F88298D532E00475DAD /* Products */,
+				81CBCD9D5584F09EC5B44801 /* Pods */,
+				F5030D86D3C1C07F2925C599 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,8 +63,7 @@
 		0FBD0F89298D532E00475DAD /* Genwin */ = {
 			isa = PBXGroup;
 			children = (
-				0FBD0F8A298D532E00475DAD /* AppDelegate.swift */,
-				0FBD0F8C298D532E00475DAD /* SceneDelegate.swift */,
+				0FBD0F9E298D541400475DAD /* Core */,
 				0FBD0F8E298D532E00475DAD /* ViewController.swift */,
 				0FBD0F90298D532E00475DAD /* Main.storyboard */,
 				0FBD0F93298D532F00475DAD /* Assets.xcassets */,
@@ -67,6 +73,33 @@
 			path = Genwin;
 			sourceTree = "<group>";
 		};
+		0FBD0F9E298D541400475DAD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				0FBD0F8A298D532E00475DAD /* AppDelegate.swift */,
+				0FBD0F8C298D532E00475DAD /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		81CBCD9D5584F09EC5B44801 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6369200B61E36C9C4CC30295 /* Pods-Genwin.debug.xcconfig */,
+				7A35087B32BF58D755728020 /* Pods-Genwin.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F5030D86D3C1C07F2925C599 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10015F0AFB725DFAF46A9E8F /* Pods_Genwin.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FBD0F9B298D532F00475DAD /* Build configuration list for PBXNativeTarget "Genwin" */;
 			buildPhases = (
+				5BE52A773E94520C02412232 /* [CP] Check Pods Manifest.lock */,
 				0FBD0F83298D532E00475DAD /* Sources */,
 				0FBD0F84298D532E00475DAD /* Frameworks */,
 				0FBD0F85298D532E00475DAD /* Resources */,
+				39B90B8EE7A6BA7CF2207CFB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +167,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		39B90B8EE7A6BA7CF2207CFB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Genwin/Pods-Genwin-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Genwin/Pods-Genwin-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Genwin/Pods-Genwin-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BE52A773E94520C02412232 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Genwin-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0FBD0F83298D532E00475DAD /* Sources */ = {
@@ -282,6 +359,7 @@
 		};
 		0FBD0F9C298D532F00475DAD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6369200B61E36C9C4CC30295 /* Pods-Genwin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +387,7 @@
 		};
 		0FBD0F9D298D532F00475DAD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A35087B32BF58D755728020 /* Pods-Genwin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
