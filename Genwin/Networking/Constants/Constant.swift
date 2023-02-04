@@ -9,11 +9,11 @@ import Foundation
 
 //MARK: - Request Enums -
 enum Server: String {
-    case baseURL = "https://laundryapp.org/api/"
+    case baseURL = "https://yts.mx/api/v2/"
 }
 
 //MARK: - Errors -
 enum APIErrors: String {
-    case connectionError
-    case canNotDecodeData
+    case connectionError = "Please check your connection"
+    case canNotDecodeData = "Something wrong please try again later."
 }

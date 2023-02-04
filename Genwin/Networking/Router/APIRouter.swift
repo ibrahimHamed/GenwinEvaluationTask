@@ -54,7 +54,14 @@ extension APIRouter {
         
         AF.request(self).responseData { response in
             printApiResponse(response.data)
-            self.handleResponse(response, completion: completion)
+            
+            self.handleResponse(response) { (response: T?, errorType) in
+                if let response = response {
+                    completion(response,nil)
+                } else if let errorType = errorType {
+                    completion(nil,errorType)
+                }
+            }
         }
         
     }
