@@ -19,20 +19,29 @@ class MoviesListViewModel: BaseViewModel {
         self.navigator = navigator
     }
     
-    func goToMovieDetails(id: String){
+    func didSelect(id: String){
         navigator.navigateTo(destination: .movieDetails(id))
     }
     
+    func viewDidLoad(){
+        self.fetchMovies()
+    }
     
+}
+
+// MARK: - Networking -
+extension MoviesListViewModel {
     private func fetchMovies(){
+        showIndicator()
         MoviesNetworkingRouter.movieList(page: currentPage).send { [weak self] (response: GenericResponseModel<MoviesModel>?, errorType) in
             guard let self = self else { return }
+            self.hideIndicator()
             if let response = response {
                 self.dataSource = response.data
                 self.movies.value = response.data?.movies.compactMap({MovieCellViewModel(movie: $0)})
             } else if let errorMessage = errorType?.rawValue {
-                
+                self.showErrorAlert(error: errorMessage)
             }
         }
-        }
     }
+}

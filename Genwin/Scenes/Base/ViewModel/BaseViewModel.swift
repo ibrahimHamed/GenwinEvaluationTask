@@ -16,7 +16,7 @@ protocol BaseViewModelProtocol {
 
 class BaseViewModel : BaseViewModelProtocol{
     func showIndicator() {
-        AppIndicator.shared.show(isGif: true)
+        AppIndicator.shared.show()
     }
     
     func hideIndicator() {
@@ -24,6 +24,6 @@ class BaseViewModel : BaseViewModelProtocol{
     }
     
     func showErrorAlert(error: String?) {
-        AppAlert.showErrorAlert(error: error)
+        AppAlert.showErrorMessage(error)
     }
 }

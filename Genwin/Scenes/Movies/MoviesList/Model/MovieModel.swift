@@ -25,7 +25,7 @@ struct Movie: Codable {
     let imdbId: String
     let title: String
     let year: Int
-    let rating: Int
+    let rating: Double
     let genres: [String]
     
     enum CodingKeys: String, CodingKey {

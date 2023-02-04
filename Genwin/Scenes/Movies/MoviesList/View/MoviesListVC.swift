@@ -19,6 +19,7 @@ class MoviesListVC: BaseVC {
         super.viewDidLoad()
         setupInitialDesign()
         setupCollectionView()
+        viewModel.viewDidLoad()
     }
     
     override func viewWillAppear(_ animated: Bool) {
