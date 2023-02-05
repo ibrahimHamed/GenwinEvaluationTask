@@ -12,6 +12,9 @@ struct MoviesModel: Codable {
     let limit: Int
     let pageNumber: Int
     let movies: [Movie]
+    var totalNumberOfPages: Int {
+        return (movieCount / limit).rounding(nearest: Float(limit))
+    }
     
     enum CodingKeys: String, CodingKey {
         case movieCount = "movie_count"
@@ -27,7 +30,7 @@ struct Movie: Codable {
     let year: Int
     let rating: Double
     let cover: String
-    let genres: [String]
+    let genres: [String]?
     
     enum CodingKeys: String, CodingKey {
         case imdbId = "imdb_code"

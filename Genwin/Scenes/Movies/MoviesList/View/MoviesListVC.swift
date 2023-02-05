@@ -75,8 +75,15 @@ extension MoviesListVC : UICollectionViewDelegate , UICollectionViewDataSource ,
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width =  collectionView.frame.width / 2 - 24
+        let width =  (collectionView.frame.width - 42) / 2
         return CGSize(width: width, height: width * 1.5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        let count = viewModel.numberOfMovies()
+        if indexPath.row == count - 2 {
+            viewModel.fetchNextPage()
+        }
     }
 }
 

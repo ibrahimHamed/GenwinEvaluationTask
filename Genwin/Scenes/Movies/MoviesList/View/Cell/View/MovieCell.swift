@@ -24,6 +24,9 @@ class MovieCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         coverImageView.image = nil
+        titleLabel.text = nil
+        yearLabel.text = nil
+        genreLabel.text = nil
     }
     
     private func setupInitialDesign(){

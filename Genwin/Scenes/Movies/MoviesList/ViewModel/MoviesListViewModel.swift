@@ -9,7 +9,7 @@ import Foundation
 
 class MoviesListViewModel: BaseViewModel {
     
-    private var dataSource: MoviesModel?
+    private var totalNumberOfPages: Int = 0
     private var currentPage = 1
     var movies: ObservableObject<[MovieCellViewModel]> = ObservableObject([])
     
@@ -21,6 +21,13 @@ class MoviesListViewModel: BaseViewModel {
     
     func didSelect(id: String){
         navigator.navigateTo(destination: .movieDetails(id))
+    }
+    
+    func fetchNextPage(){
+        if currentPage < totalNumberOfPages {
+            currentPage += 1
+            fetchMovies()
+        }
     }
     
     func viewDidLoad(){
@@ -45,7 +52,7 @@ extension MoviesListViewModel {
             guard let self = self else { return }
             self.hideIndicator()
             if let response = response {
-                self.dataSource = response.data
+                self.totalNumberOfPages = response.data?.totalNumberOfPages ?? 0
                 self.movies.value.append(contentsOf: response.data?.movies.compactMap({MovieCellViewModel(movie: $0)}) ?? [])
             } else if let errorMessage = errorType?.rawValue {
                 self.showErrorAlert(error: errorMessage)

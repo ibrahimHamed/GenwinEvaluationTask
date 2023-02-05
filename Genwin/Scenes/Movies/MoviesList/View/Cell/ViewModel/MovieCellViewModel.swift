@@ -18,7 +18,11 @@ class MovieCellViewModel {
         self.imdbId = movie.imdbId
         self.title = movie.title
         self.year = String(movie.year)
-        self.genre = movie.genres[0]
+        if let genre = movie.genres?[0] {
+            self.genre = genre
+        } else {
+            self.genre = "Unknown"
+        }
         self.cover = movie.cover
     }
     

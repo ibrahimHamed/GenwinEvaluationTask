@@ -52,6 +52,7 @@
 		0FDEA7E1298F1E8100E0687C /* UIwindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA7E0298F1E8100E0687C /* UIwindow.swift */; };
 		0FDEA7E4298F270F00E0687C /* DownloadImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA7E3298F270F00E0687C /* DownloadImageManager.swift */; };
 		0FDEA7E7298F277C00E0687C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA7E6298F277C00E0687C /* UIImageView.swift */; };
+		0FDEA7EA298F2D2200E0687C /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA7E9298F2D2200E0687C /* Integer.swift */; };
 		59A2D1485F6554C0F5530DCA /* Pods_Genwin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10015F0AFB725DFAF46A9E8F /* Pods_Genwin.framework */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		0FDEA7E0298F1E8100E0687C /* UIwindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIwindow.swift; sourceTree = "<group>"; };
 		0FDEA7E3298F270F00E0687C /* DownloadImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageManager.swift; sourceTree = "<group>"; };
 		0FDEA7E6298F277C00E0687C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		0FDEA7E9298F2D2200E0687C /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
 		10015F0AFB725DFAF46A9E8F /* Pods_Genwin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genwin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6369200B61E36C9C4CC30295 /* Pods-Genwin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genwin.debug.xcconfig"; path = "Target Support Files/Pods-Genwin/Pods-Genwin.debug.xcconfig"; sourceTree = "<group>"; };
 		7A35087B32BF58D755728020 /* Pods-Genwin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genwin.release.xcconfig"; path = "Target Support Files/Pods-Genwin/Pods-Genwin.release.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				0FDEA7D6298F196300E0687C /* UIImage.swift */,
 				0FDEA7E0298F1E8100E0687C /* UIwindow.swift */,
 				0FDEA7E6298F277C00E0687C /* UIImageView.swift */,
+				0FDEA7E9298F2D2200E0687C /* Integer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				0FDEA7DE298F1D7200E0687C /* AppAlert.swift in Sources */,
 				0F872835298EB6C5005508E1 /* MovieCell.swift in Sources */,
 				0F87282D298EB5A8005508E1 /* ClassNameProtocol.swift in Sources */,
+				0FDEA7EA298F2D2200E0687C /* Integer.swift in Sources */,
 				0FDEA7E7298F277C00E0687C /* UIImageView.swift in Sources */,
 				0F87280D298DB098005508E1 /* MovieDetailsViewModel.swift in Sources */,
 				0F87284D298F04FE005508E1 /* MoviesParametersKeys.swift in Sources */,
