@@ -27,6 +27,14 @@ class MoviesListViewModel: BaseViewModel {
         self.fetchMovies()
     }
     
+    func numberOfMovies()-> Int {
+        return movies.value.count
+    }
+    
+    func getMovie(indexPath: IndexPath) -> MovieCellViewModel {
+        return movies.value[indexPath.row]
+    }
+    
 }
 
 // MARK: - Networking -
@@ -38,7 +46,7 @@ extension MoviesListViewModel {
             self.hideIndicator()
             if let response = response {
                 self.dataSource = response.data
-                self.movies.value = response.data?.movies.compactMap({MovieCellViewModel(movie: $0)})
+                self.movies.value.append(contentsOf: response.data?.movies.compactMap({MovieCellViewModel(movie: $0)}) ?? [])
             } else if let errorMessage = errorType?.rawValue {
                 self.showErrorAlert(error: errorMessage)
             }

@@ -91,6 +91,7 @@
             <size key="customSize" width="222" height="270"/>
             <connections>
                 <outlet property="containerView" destination="luE-ox-IVv" id="XgO-zq-6jb"/>
+                <outlet property="coverImageView" destination="2Lp-OT-KDd" id="1Kz-sM-Hvc"/>
                 <outlet property="genreLabel" destination="iKb-Yg-9Lv" id="PzX-eq-9gN"/>
                 <outlet property="titleLabel" destination="HCk-Sf-y0a" id="rWe-bB-kx0"/>
                 <outlet property="yearLabel" destination="XFm-5u-9IV" id="jH9-mV-FTO"/>

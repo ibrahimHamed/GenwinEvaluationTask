@@ -19,6 +19,7 @@ class MoviesListVC: BaseVC {
         super.viewDidLoad()
         setupInitialDesign()
         setupCollectionView()
+        setupBinding()
         viewModel.viewDidLoad()
     }
     
@@ -49,16 +50,23 @@ class MoviesListVC: BaseVC {
         logo.setHeight(constant: 30)
         navigationItem.titleView = logo
     }
+    
+    private func setupBinding(){
+        viewModel.movies.binding { [weak self] (movies) in
+            self?.collectionView.reloadData()
+        }
+    }
 }
 
 //MARK: - CollectionView Extension
 extension MoviesListVC : UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 19
+        return viewModel.numberOfMovies()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(with: MovieCell.self, for: indexPath)
+        cell.configure(with: viewModel.getMovie(indexPath: indexPath))
         return cell
     }
     

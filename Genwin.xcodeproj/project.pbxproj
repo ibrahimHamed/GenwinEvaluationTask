@@ -50,6 +50,8 @@
 		0FDEA7DA298F1B1200E0687C /* indicatorGifImage.gif in Resources */ = {isa = PBXBuildFile; fileRef = 0FDEA7D9298F1B1200E0687C /* indicatorGifImage.gif */; };
 		0FDEA7DE298F1D7200E0687C /* AppAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA7DD298F1D7200E0687C /* AppAlert.swift */; };
 		0FDEA7E1298F1E8100E0687C /* UIwindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA7E0298F1E8100E0687C /* UIwindow.swift */; };
+		0FDEA7E4298F270F00E0687C /* DownloadImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA7E3298F270F00E0687C /* DownloadImageManager.swift */; };
+		0FDEA7E7298F277C00E0687C /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FDEA7E6298F277C00E0687C /* UIImageView.swift */; };
 		59A2D1485F6554C0F5530DCA /* Pods_Genwin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10015F0AFB725DFAF46A9E8F /* Pods_Genwin.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		0FDEA7D9298F1B1200E0687C /* indicatorGifImage.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = indicatorGifImage.gif; sourceTree = "<group>"; };
 		0FDEA7DD298F1D7200E0687C /* AppAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlert.swift; sourceTree = "<group>"; };
 		0FDEA7E0298F1E8100E0687C /* UIwindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIwindow.swift; sourceTree = "<group>"; };
+		0FDEA7E3298F270F00E0687C /* DownloadImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadImageManager.swift; sourceTree = "<group>"; };
+		0FDEA7E6298F277C00E0687C /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		10015F0AFB725DFAF46A9E8F /* Pods_Genwin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Genwin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6369200B61E36C9C4CC30295 /* Pods-Genwin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genwin.debug.xcconfig"; path = "Target Support Files/Pods-Genwin/Pods-Genwin.debug.xcconfig"; sourceTree = "<group>"; };
 		7A35087B32BF58D755728020 /* Pods-Genwin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Genwin.release.xcconfig"; path = "Target Support Files/Pods-Genwin/Pods-Genwin.release.xcconfig"; sourceTree = "<group>"; };
@@ -138,6 +142,7 @@
 				0F872830298EB611005508E1 /* NSObject.swift */,
 				0FDEA7D6298F196300E0687C /* UIImage.swift */,
 				0FDEA7E0298F1E8100E0687C /* UIwindow.swift */,
+				0FDEA7E6298F277C00E0687C /* UIImageView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 		0FBD0F9F298D562600475DAD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				0FDEA7E2298F269600E0687C /* DownloadImage */,
 				0F872837298EBA73005508E1 /* BaseModels */,
 				0FBD0FA8298D56DD00475DAD /* Router */,
 				0FBD0FA5298D567F00475DAD /* Constants */,
@@ -471,6 +477,14 @@
 				0FDEA7DD298F1D7200E0687C /* AppAlert.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		0FDEA7E2298F269600E0687C /* DownloadImage */ = {
+			isa = PBXGroup;
+			children = (
+				0FDEA7E3298F270F00E0687C /* DownloadImageManager.swift */,
+			);
+			path = DownloadImage;
 			sourceTree = "<group>";
 		};
 		81CBCD9D5584F09EC5B44801 /* Pods */ = {
@@ -636,11 +650,13 @@
 				0FDEA7DE298F1D7200E0687C /* AppAlert.swift in Sources */,
 				0F872835298EB6C5005508E1 /* MovieCell.swift in Sources */,
 				0F87282D298EB5A8005508E1 /* ClassNameProtocol.swift in Sources */,
+				0FDEA7E7298F277C00E0687C /* UIImageView.swift in Sources */,
 				0F87280D298DB098005508E1 /* MovieDetailsViewModel.swift in Sources */,
 				0F87284D298F04FE005508E1 /* MoviesParametersKeys.swift in Sources */,
 				0FBD0FA4298D566800475DAD /* APIParameters.swift in Sources */,
 				0FBD0FA2298D565300475DAD /* ServerPath.swift in Sources */,
 				0FBD0FA7298D568F00475DAD /* Constant.swift in Sources */,
+				0FDEA7E4298F270F00E0687C /* DownloadImageManager.swift in Sources */,
 				0F87283E298EBC26005508E1 /* MovieModel.swift in Sources */,
 				0F87282A298EAE0E005508E1 /* UIView.swift in Sources */,
 				0F87284B298F03D9005508E1 /* MoviesServerPath.swift in Sources */,

@@ -14,10 +14,16 @@ class MovieCell: UICollectionViewCell {
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var yearLabel: UILabel!
     @IBOutlet weak private var genreLabel: UILabel!
+    @IBOutlet weak var coverImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupInitialDesign()
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        coverImageView.image = nil
     }
     
     private func setupInitialDesign(){
@@ -28,6 +34,7 @@ class MovieCell: UICollectionViewCell {
         titleLabel.text = movie.title
         yearLabel.text = movie.year
         genreLabel.text = movie.genre
+        coverImageView.setImageFrom(url: movie.cover)
     }
     
     
