@@ -26,6 +26,10 @@ class MovieDetailsViewModel: BaseViewModel {
         return synopsis
     }
     
+    func getMovieTitle() -> String {
+        return movie.value?.title ?? ""
+    }
+    
     func numberOfScreenshots()-> Int {
         return movie.value?.screenshots.count ?? 0
     }
@@ -35,6 +39,14 @@ class MovieDetailsViewModel: BaseViewModel {
     
     func getScreenshot(at indexPath : IndexPath) -> String{
         return movie.value?.screenshots[indexPath.row] ?? ""
+    }
+    
+    func getAllScreenShots() -> [String] {
+        return movie.value?.screenshots ?? []
+    }
+    
+    func getAllCastImages() -> [String] {
+        return movie.value?.cast?.map({$0.image ?? ""}) ?? []
     }
     
     func getVideoId() -> String? {

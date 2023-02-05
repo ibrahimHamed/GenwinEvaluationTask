@@ -23,5 +23,32 @@ extension UIView {
         self.layer.borderColor = color.cgColor
         self.layer.borderWidth = width
     }
+    
+    func addTapGesture(_ action: @escaping () -> Void) {
+        endEditing(true)
+        isUserInteractionEnabled = true
+        
+        let tap = MyTapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        tap.action = action
+        addGestureRecognizer(tap)
+        
+        endEditing(true)
+    }
+    
+    class MyTapGestureRecognizer: UITapGestureRecognizer {
+        var action: (() -> Void)?
+    }
+    
+    @objc func handleTap(_ sender: MyTapGestureRecognizer) {
+        alpha = 0.2
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: [.curveLinear], animations: { self.alpha = 1.0 }, completion: nil)
+        sender.action!()
+    }
 }
+
+
+
+
+
+
 

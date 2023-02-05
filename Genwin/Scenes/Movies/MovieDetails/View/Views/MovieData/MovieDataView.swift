@@ -56,12 +56,24 @@ class MovieDataView: UIView {
     func configure(movie: MovieDataViewViewModel){
         backgroundImageView.setImageFrom(url: movie.backgroundImage)
         movieCoverImageView.setImageFrom(url: movie.coverImage)
+        setupTappedImage(coverImage: movie.coverImage)
         yearLabel.text = movie.year
         genresLabel.text = movie.genre
         rateLabel.text = movie.rating
         viewModel = movie
         qualityCollectionView.reloadData()
     }
+    
+    func setupTappedImage(coverImage: String){
+        movieCoverImageView.addTapGesture { [weak self] in
+            guard let self = self else { return }
+            let vc = ImageViewerVC.create(images: [coverImage])
+            self.parentViewController?.present(vc, animated: true)
+        }
+
+    }
+    
+    
     
 }
 
@@ -77,12 +89,8 @@ extension MovieDataView : UICollectionViewDelegate , UICollectionViewDataSource 
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 30, height: collectionView.frame.height)
+        return CGSize(width: 60, height: collectionView.frame.height)
     }
 }
 

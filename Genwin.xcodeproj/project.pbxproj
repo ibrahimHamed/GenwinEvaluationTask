@@ -48,6 +48,11 @@
 		0FA27B3D298FE7E400267C95 /* ScreenshotCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA27B3B298FE7E400267C95 /* ScreenshotCell.xib */; };
 		0FA27B43298FF69E00267C95 /* MovieTrailerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA27B41298FF69E00267C95 /* MovieTrailerView.swift */; };
 		0FA27B44298FF69E00267C95 /* MovieTrailerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA27B42298FF69E00267C95 /* MovieTrailerView.xib */; };
+		0FA27B4C29904F7800267C95 /* ImageViewerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA27B4929904F7800267C95 /* ImageViewerCell.swift */; };
+		0FA27B4D29904F7800267C95 /* ImageViewerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA27B4A29904F7800267C95 /* ImageViewerCell.xib */; };
+		0FA27B50299050E900267C95 /* ImageViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA27B4E299050E900267C95 /* ImageViewerVC.swift */; };
+		0FA27B51299050E900267C95 /* ImageViewerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA27B4F299050E900267C95 /* ImageViewerVC.xib */; };
+		0FA27B532990572200267C95 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA27B522990572200267C95 /* UIResponder.swift */; };
 		0FBD0F8B298D532E00475DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBD0F8A298D532E00475DAD /* AppDelegate.swift */; };
 		0FBD0F8D298D532E00475DAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBD0F8C298D532E00475DAD /* SceneDelegate.swift */; };
 		0FBD0F92298D532E00475DAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FBD0F90298D532E00475DAD /* Main.storyboard */; };
@@ -111,6 +116,11 @@
 		0FA27B3B298FE7E400267C95 /* ScreenshotCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScreenshotCell.xib; sourceTree = "<group>"; };
 		0FA27B41298FF69E00267C95 /* MovieTrailerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrailerView.swift; sourceTree = "<group>"; };
 		0FA27B42298FF69E00267C95 /* MovieTrailerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieTrailerView.xib; sourceTree = "<group>"; };
+		0FA27B4929904F7800267C95 /* ImageViewerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewerCell.swift; sourceTree = "<group>"; };
+		0FA27B4A29904F7800267C95 /* ImageViewerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewerCell.xib; sourceTree = "<group>"; };
+		0FA27B4E299050E900267C95 /* ImageViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerVC.swift; sourceTree = "<group>"; };
+		0FA27B4F299050E900267C95 /* ImageViewerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerVC.xib; sourceTree = "<group>"; };
+		0FA27B522990572200267C95 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
 		0FBD0F87298D532E00475DAD /* Genwin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genwin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FBD0F8A298D532E00475DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FBD0F8C298D532E00475DAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +161,7 @@
 		0F8727F0298D58A7005508E1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0FA27B4529904F6A00267C95 /* Viewer */,
 				0FDEA7DC298F1CE400E0687C /* Alert */,
 				0FDEA7D2298F180900E0687C /* Indicator */,
 				0F872843298F0119005508E1 /* Classes */,
@@ -172,6 +183,7 @@
 				0FDEA7E0298F1E8100E0687C /* UIwindow.swift */,
 				0FDEA7E6298F277C00E0687C /* UIImageView.swift */,
 				0FDEA7E9298F2D2200E0687C /* Integer.swift */,
+				0FA27B522990572200267C95 /* UIResponder.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -489,6 +501,33 @@
 			path = MovieTrailer;
 			sourceTree = "<group>";
 		};
+		0FA27B4529904F6A00267C95 /* Viewer */ = {
+			isa = PBXGroup;
+			children = (
+				0FA27B4629904F7800267C95 /* ImageViewer */,
+			);
+			path = Viewer;
+			sourceTree = "<group>";
+		};
+		0FA27B4629904F7800267C95 /* ImageViewer */ = {
+			isa = PBXGroup;
+			children = (
+				0FA27B4829904F7800267C95 /* ImageViewerCell */,
+				0FA27B4E299050E900267C95 /* ImageViewerVC.swift */,
+				0FA27B4F299050E900267C95 /* ImageViewerVC.xib */,
+			);
+			path = ImageViewer;
+			sourceTree = "<group>";
+		};
+		0FA27B4829904F7800267C95 /* ImageViewerCell */ = {
+			isa = PBXGroup;
+			children = (
+				0FA27B4929904F7800267C95 /* ImageViewerCell.swift */,
+				0FA27B4A29904F7800267C95 /* ImageViewerCell.xib */,
+			);
+			path = ImageViewerCell;
+			sourceTree = "<group>";
+		};
 		0FBD0F7E298D532E00475DAD = {
 			isa = PBXGroup;
 			children = (
@@ -691,10 +730,12 @@
 				0FA27B3D298FE7E400267C95 /* ScreenshotCell.xib in Resources */,
 				0FA27B2E298FD06500267C95 /* QualityCell.xib in Resources */,
 				0FBD0F97298D532F00475DAD /* LaunchScreen.storyboard in Resources */,
+				0FA27B51299050E900267C95 /* ImageViewerVC.xib in Resources */,
 				0F872836298EB6C5005508E1 /* MovieCell.xib in Resources */,
 				0F872815298DB0C9005508E1 /* MoviesListVC.xib in Resources */,
 				0FBD0F94298D532F00475DAD /* Assets.xcassets in Resources */,
 				0F87281D298DBC62005508E1 /* Colors.xcassets in Resources */,
+				0FA27B4D29904F7800267C95 /* ImageViewerCell.xib in Resources */,
 				0FA27B38298FE64900267C95 /* CastCell.xib in Resources */,
 				0FDEA7DA298F1B1200E0687C /* indicatorGifImage.gif in Resources */,
 				0F872809298DB06B005508E1 /* MovieDetailsVC.xib in Resources */,
@@ -755,6 +796,8 @@
 				0FA27B32298FE5D100267C95 /* CastViewModel.swift in Sources */,
 				0F87282F298EB5BD005508E1 /* UICollectionView.swift in Sources */,
 				0F87281F298DBC99005508E1 /* Colors.swift in Sources */,
+				0FA27B532990572200267C95 /* UIResponder.swift in Sources */,
+				0FA27B50299050E900267C95 /* ImageViewerVC.swift in Sources */,
 				0F95D38F298FC13B00A196E7 /* MovieDataView.swift in Sources */,
 				0F872848298F02CE005508E1 /* MoviesNetworkingRouter.swift in Sources */,
 				0F872831298EB611005508E1 /* NSObject.swift in Sources */,
@@ -771,6 +814,7 @@
 				0FDEA7D7298F196300E0687C /* UIImage.swift in Sources */,
 				0F8727FD298DAF7C005508E1 /* MainFactory.swift in Sources */,
 				0F8727F3298D58FA005508E1 /* Alamofire.swift in Sources */,
+				0FA27B4C29904F7800267C95 /* ImageViewerCell.swift in Sources */,
 				0FDEA7D1298F15C800E0687C /* BaseViewModel.swift in Sources */,
 				0F87283B298EBBE2005508E1 /* GenericResponseModel.swift in Sources */,
 				0FBD0F8B298D532E00475DAD /* AppDelegate.swift in Sources */,

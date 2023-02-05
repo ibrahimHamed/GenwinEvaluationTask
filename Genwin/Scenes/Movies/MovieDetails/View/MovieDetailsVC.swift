@@ -28,6 +28,7 @@ class MovieDetailsVC: BaseVC {
         setupInitialDesign()
         setupCollectionView()
         setupBinding()
+        removeTitle()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,7 +46,14 @@ class MovieDetailsVC: BaseVC {
         } else {
             synopsisView.isHidden = true
         }
-        
+    }
+    
+    private func removeTitle(){
+        self.navigationController?.navigationBar.topItem?.title = ""
+    }
+    
+    private func setupTitle(){
+        self.navigationController?.navigationBar.topItem?.title = viewModel.getMovieTitle()
     }
     
     private func setupCollectionView(){
@@ -73,7 +81,7 @@ class MovieDetailsVC: BaseVC {
     }
     
     private func setupNavBar(){
-        navigationController?.navigationBar.backgroundColor = AppColors.shared.orangeNavigationColor
+        navigationController?.navigationBar.barTintColor = AppColors.shared.orangeNavigationColor
     }
     
     private func setupStatusBar(){
@@ -85,6 +93,7 @@ class MovieDetailsVC: BaseVC {
     private func setupBinding(){
         viewModel.movie.binding { [weak self] (movie) in
             guard let self = self, let movie = movie else { return }
+            self.setupTitle()
             self.movieDataView.configure(movie: MovieDataViewViewModel(movie: movie))
             self.handleMovieTrailerView()
             self.screenShotsCollectionView.reloadData()
@@ -124,7 +133,14 @@ extension MovieDetailsVC : UICollectionViewDelegate , UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-    }
+        if collectionView == screenShotsCollectionView {
+            let vc = ImageViewerVC.create(images: viewModel.getAllScreenShots(), selectedIndex: indexPath)
+            self.present(vc, animated: true)
+        } else {
+                let vc = ImageViewerVC.create(images: viewModel.getAllCastImages(), selectedIndex: indexPath)
+                self.present(vc, animated: true)
+            }
+        }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch collectionView {

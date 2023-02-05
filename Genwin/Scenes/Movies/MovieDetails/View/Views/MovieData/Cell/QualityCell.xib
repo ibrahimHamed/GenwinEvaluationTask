@@ -12,18 +12,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="QualityCell" customModule="Genwin" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="121" height="58"/>
+            <rect key="frame" x="0.0" y="0.0" width="87" height="52"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="121" height="58"/>
+                <rect key="frame" x="0.0" y="0.0" width="87" height="52"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZVn-cL-gbW">
-                        <rect key="frame" x="4" y="2" width="113" height="54"/>
+                        <rect key="frame" x="4" y="2" width="79" height="48"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHb-ak-jK3">
-                                <rect key="frame" x="40" y="19.333333333333332" width="33" height="15.666666666666668"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <rect key="frame" x="24" y="17" width="31" height="14.333333333333336"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" name="whiteFontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -43,12 +43,12 @@
                 <constraint firstAttribute="bottom" secondItem="ZVn-cL-gbW" secondAttribute="bottom" constant="2" id="pYu-cQ-Mag"/>
                 <constraint firstItem="ZVn-cL-gbW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="qRB-Tn-rFR"/>
             </constraints>
-            <size key="customSize" width="121" height="58"/>
+            <size key="customSize" width="87" height="52"/>
             <connections>
                 <outlet property="qualityLabel" destination="yHb-ak-jK3" id="ANs-ri-uxF"/>
                 <outlet property="viewBackground" destination="ZVn-cL-gbW" id="lCr-of-UTb"/>
             </connections>
-            <point key="canvasLocation" x="-100" y="-19.718309859154932"/>
+            <point key="canvasLocation" x="-125.95419847328243" y="-21.83098591549296"/>
         </collectionViewCell>
     </objects>
     <resources>
