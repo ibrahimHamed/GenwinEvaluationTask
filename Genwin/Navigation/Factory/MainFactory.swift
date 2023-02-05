@@ -15,9 +15,9 @@ class MainFactory {
         return vc
     }
     
-    static func MovieDetails(imdbId: String) -> MovieDetailsVC {
+    static func MovieDetails(imdbId: String,synopsis: String?) -> MovieDetailsVC {
         let vc = MovieDetailsVC()
-        let vm = MovieDetailsViewModel(imdbId: imdbId,navigator: MainNavigator(vc))
+        let vm = MovieDetailsViewModel(imdbId: imdbId, synopsis: synopsis,navigator: MainNavigator(vc))
         vc.viewModel = vm
         return vc
     }

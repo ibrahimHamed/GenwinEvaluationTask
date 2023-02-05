@@ -13,7 +13,6 @@ protocol BaseViewModelProtocol {
     func showErrorAlert(error: String?)
 }
 
-
 class BaseViewModel : BaseViewModelProtocol{
     func showIndicator() {
         AppIndicator.shared.show()

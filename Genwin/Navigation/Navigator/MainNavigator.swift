@@ -9,7 +9,7 @@ import UIKit
 
 enum MainDestination {
     case moviesList
-    case movieDetails(String)
+    case movieDetails(String,String?)
 }
 
 protocol MainNavigatorProtocol {
@@ -31,8 +31,8 @@ class MainNavigator: MainNavigatorProtocol {
         switch destination {
         case .moviesList:
             controller.push(MainFactory.MoviesList())
-        case .movieDetails(let id):
-            controller.push(MainFactory.MovieDetails(imdbId: id))
+        case let .movieDetails(imdbId,synopsis):
+            controller.push(MainFactory.MovieDetails(imdbId: imdbId, synopsis: synopsis))
         }
     }
 }

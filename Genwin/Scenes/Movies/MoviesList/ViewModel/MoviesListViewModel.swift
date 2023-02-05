@@ -36,7 +36,8 @@ class MoviesListViewModel: BaseViewModel {
     
     func didSelectMovie(at indexPath: IndexPath) {
         let imdbId = movies.value[indexPath.row].imdbId
-        navigator.navigateTo(destination: .movieDetails(imdbId))
+        let synopsis = movies.value[indexPath.row].synopsis
+        navigator.navigateTo(destination: .movieDetails(imdbId, synopsis))
     }
     
     func getMovie(indexPath: IndexPath) -> MovieCellViewModel {

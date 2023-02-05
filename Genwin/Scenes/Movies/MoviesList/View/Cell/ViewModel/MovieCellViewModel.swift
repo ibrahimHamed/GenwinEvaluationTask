@@ -13,7 +13,7 @@ class MovieCellViewModel {
     var year: String
     var genre: String
     var cover: String
-    
+    var synopsis: String
     init(movie: Movie) {
         self.imdbId = movie.imdbId
         self.title = movie.title
@@ -24,6 +24,7 @@ class MovieCellViewModel {
             self.genre = "Unknown"
         }
         self.cover = movie.cover
+        self.synopsis = movie.synopsis ?? ""
     }
     
 }

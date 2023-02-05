@@ -9,7 +9,7 @@ import Alamofire
 
 enum MoviesNetworkingRouter {
     case movieList(page: Int)
-    case movieDetails
+    case movieDetails(imdbId: String)
 }
 
 extension MoviesNetworkingRouter: APIRouter {
@@ -37,8 +37,12 @@ extension MoviesNetworkingRouter: APIRouter {
             return [
                 MoviesParametersKeys.page.rawValue: page
             ]
-        case .movieDetails:
-            return [:]
+        case let .movieDetails(imdbId):
+            return [
+                MoviesParametersKeys.imdbId.rawValue: imdbId,
+                MoviesParametersKeys.withCast.rawValue: "true",
+                MoviesParametersKeys.withImages.rawValue: "true"
+                ]
         }
     }
     
