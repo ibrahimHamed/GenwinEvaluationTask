@@ -11,6 +11,7 @@ class MovieDetailsVC: BaseVC {
     
     // MARK: - Outlet -
     
+    @IBOutlet weak private var mainStackView: UIStackView!
     @IBOutlet weak private var movieTrailerView: MovieTrailerView!
     @IBOutlet weak private var movieDataView: MovieDataView!
     @IBOutlet weak private var synopsisLabel: UILabel!
@@ -41,6 +42,7 @@ class MovieDetailsVC: BaseVC {
     
     private func setupInitialDesign(){
         view.backgroundColor = AppColors.shared.blackBackgroundColor
+        mainStackView.isHidden = true
         if let synopsis = viewModel.getSynopsis() {
             synopsisLabel.text = synopsis
         } else {
@@ -98,6 +100,8 @@ class MovieDetailsVC: BaseVC {
             self.handleMovieTrailerView()
             self.screenShotsCollectionView.reloadData()
             self.castCollectionView.reloadData()
+            self.mainStackView.isHidden = false
+            self.mainStackView.animateToTop()
         }
     }
 }

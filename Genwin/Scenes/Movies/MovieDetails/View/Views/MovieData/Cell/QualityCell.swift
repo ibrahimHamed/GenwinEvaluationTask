@@ -19,6 +19,7 @@ class QualityCell: UICollectionViewCell {
     
     private func setupDesign(){
         viewBackground.addBorder(color: .white, width: 1)
+        viewBackground.round(4)
     }
     
     func configure(quality: String){

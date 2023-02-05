@@ -53,6 +53,7 @@
 		0FA27B50299050E900267C95 /* ImageViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA27B4E299050E900267C95 /* ImageViewerVC.swift */; };
 		0FA27B51299050E900267C95 /* ImageViewerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FA27B4F299050E900267C95 /* ImageViewerVC.xib */; };
 		0FA27B532990572200267C95 /* UIResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA27B522990572200267C95 /* UIResponder.swift */; };
+		0FA27B552990583500267C95 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA27B542990583500267C95 /* UIStackView.swift */; };
 		0FBD0F8B298D532E00475DAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBD0F8A298D532E00475DAD /* AppDelegate.swift */; };
 		0FBD0F8D298D532E00475DAD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBD0F8C298D532E00475DAD /* SceneDelegate.swift */; };
 		0FBD0F92298D532E00475DAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FBD0F90298D532E00475DAD /* Main.storyboard */; };
@@ -121,6 +122,7 @@
 		0FA27B4E299050E900267C95 /* ImageViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerVC.swift; sourceTree = "<group>"; };
 		0FA27B4F299050E900267C95 /* ImageViewerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageViewerVC.xib; sourceTree = "<group>"; };
 		0FA27B522990572200267C95 /* UIResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIResponder.swift; sourceTree = "<group>"; };
+		0FA27B542990583500267C95 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		0FBD0F87298D532E00475DAD /* Genwin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Genwin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FBD0F8A298D532E00475DAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FBD0F8C298D532E00475DAD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				0FDEA7E6298F277C00E0687C /* UIImageView.swift */,
 				0FDEA7E9298F2D2200E0687C /* Integer.swift */,
 				0FA27B522990572200267C95 /* UIResponder.swift */,
+				0FA27B542990583500267C95 /* UIStackView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -839,6 +842,7 @@
 				0FDEA7E4298F270F00E0687C /* DownloadImageManager.swift in Sources */,
 				0F87283E298EBC26005508E1 /* MoviesModel.swift in Sources */,
 				0F87282A298EAE0E005508E1 /* UIView.swift in Sources */,
+				0FA27B552990583500267C95 /* UIStackView.swift in Sources */,
 				0F87284B298F03D9005508E1 /* MoviesServerPath.swift in Sources */,
 				0F872827298EA659005508E1 /* BaseNav.swift in Sources */,
 			);

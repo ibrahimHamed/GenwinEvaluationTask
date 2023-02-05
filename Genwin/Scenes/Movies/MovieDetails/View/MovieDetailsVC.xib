@@ -14,6 +14,7 @@
             <connections>
                 <outlet property="castCollectionView" destination="Gtq-R4-ysj" id="vij-sD-LIi"/>
                 <outlet property="castView" destination="Mft-Hz-pjw" id="mXd-3N-cDL"/>
+                <outlet property="mainStackView" destination="xLI-Uh-u8T" id="dUn-8l-il6"/>
                 <outlet property="movieDataView" destination="iRY-S3-1bU" id="slY-Ut-lhW"/>
                 <outlet property="movieTrailerView" destination="FOd-vF-OIx" id="9UF-4o-lfO"/>
                 <outlet property="screenShotsCollectionView" destination="g8j-iI-thI" id="fWe-bn-Kvo"/>
