@@ -10,8 +10,10 @@ import Foundation
 class MovieDetailsViewModel {
     
     private let navigator: MainNavigatorProtocol
+    private let imdbId: String
     
-    init(navigator: MainNavigatorProtocol){
+    init(imdbId: String,navigator: MainNavigatorProtocol){
         self.navigator = navigator
+        self.imdbId = imdbId
     }
 }

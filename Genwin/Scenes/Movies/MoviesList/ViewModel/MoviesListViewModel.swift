@@ -19,10 +19,6 @@ class MoviesListViewModel: BaseViewModel {
         self.navigator = navigator
     }
     
-    func didSelect(id: String){
-        navigator.navigateTo(destination: .movieDetails(id))
-    }
-    
     func fetchNextPage(){
         if currentPage < totalNumberOfPages {
             currentPage += 1
@@ -36,6 +32,11 @@ class MoviesListViewModel: BaseViewModel {
     
     func numberOfMovies()-> Int {
         return movies.value.count
+    }
+    
+    func didSelectMovie(at indexPath: IndexPath) {
+        let imdbId = movies.value[indexPath.row].imdbId
+        navigator.navigateTo(destination: .movieDetails(imdbId))
     }
     
     func getMovie(indexPath: IndexPath) -> MovieCellViewModel {

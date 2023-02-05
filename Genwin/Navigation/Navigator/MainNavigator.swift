@@ -32,7 +32,7 @@ class MainNavigator: MainNavigatorProtocol {
         case .moviesList:
             controller.push(MainFactory.MoviesList())
         case .movieDetails(let id):
-            controller.push(MainFactory.MovieDetails(id: id))
+            controller.push(MainFactory.MovieDetails(imdbId: id))
         }
     }
 }
