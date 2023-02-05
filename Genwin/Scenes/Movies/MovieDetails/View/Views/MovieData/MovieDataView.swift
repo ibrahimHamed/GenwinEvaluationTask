@@ -73,7 +73,7 @@ extension MovieDataView : UICollectionViewDelegate , UICollectionViewDataSource 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(with: QualityCell.self, for: indexPath)
-//        cell.configure(quality: torrents[indexPath.row].quality)
+        cell.configure(quality: viewModel?.getTorrentQuality(at: indexPath) ?? "")
         return cell
     }
     

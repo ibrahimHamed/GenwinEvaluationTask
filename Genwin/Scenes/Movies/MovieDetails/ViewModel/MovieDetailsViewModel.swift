@@ -37,6 +37,10 @@ class MovieDetailsViewModel: BaseViewModel {
         return movie.value?.screenshots[indexPath.row] ?? ""
     }
     
+    func getVideoId() -> String? {
+        return movie.value?.videoId
+    }
+    
     func getCast(at indexPath : IndexPath)-> CastViewModel{
         return CastViewModel(cast: movie.value?.cast?[indexPath.row])
     }

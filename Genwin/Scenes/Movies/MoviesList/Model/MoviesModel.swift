@@ -38,6 +38,7 @@ struct Movie: Codable {
     let cast: [Cast]?
     let torrents: [Torrent]?
     let synopsis: String?
+    let videoId: String?
     
     var screenshots: [String] {
         return [firstScreenShot, secondScreenShot, thirdScreenShot].compactMap({$0})
@@ -57,6 +58,7 @@ struct Movie: Codable {
         case cast
         case torrents
         case synopsis
+        case videoId = "yt_trailer_code"
     }
 }
 

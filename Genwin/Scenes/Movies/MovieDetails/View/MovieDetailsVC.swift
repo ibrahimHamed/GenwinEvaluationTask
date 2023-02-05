@@ -10,6 +10,8 @@ import UIKit
 class MovieDetailsVC: BaseVC {
     
     // MARK: - Outlet -
+    
+    @IBOutlet weak private var movieTrailerView: MovieTrailerView!
     @IBOutlet weak private var movieDataView: MovieDataView!
     @IBOutlet weak private var synopsisLabel: UILabel!
     @IBOutlet weak private var synopsisView: UIView!
@@ -30,8 +32,8 @@ class MovieDetailsVC: BaseVC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setupStatusBar()
-        setupNavBar()
+//        setupStatusBar()
+//        setupNavBar()
         viewModel.viewDidLoad()
         
     }
@@ -61,6 +63,14 @@ class MovieDetailsVC: BaseVC {
         screenshotView.isHidden = screenShotsCount == 0 ? true : false
     }
     
+    private func handleMovieTrailerView(){
+        if let videoId = viewModel.getVideoId(), videoId != "" {
+            movieTrailerView.configure(videoId: videoId)
+            movieTrailerView.isHidden = false
+        } else {
+            movieTrailerView.isHidden = true
+        }
+    }
     
     private func setupNavBar(){
         navigationController?.navigationBar.backgroundColor = AppColors.shared.orangeNavigationColor
@@ -70,10 +80,13 @@ class MovieDetailsVC: BaseVC {
         setupStatusBar(color: AppColors.shared.orangeStatusBarColor)
     }
     
+    
+    
     private func setupBinding(){
         viewModel.movie.binding { [weak self] (movie) in
             guard let self = self, let movie = movie else { return }
             self.movieDataView.configure(movie: MovieDataViewViewModel(movie: movie))
+            self.handleMovieTrailerView()
             self.screenShotsCollectionView.reloadData()
             self.castCollectionView.reloadData()
         }

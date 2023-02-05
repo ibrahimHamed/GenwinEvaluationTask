@@ -15,6 +15,7 @@
                 <outlet property="castCollectionView" destination="Gtq-R4-ysj" id="vij-sD-LIi"/>
                 <outlet property="castView" destination="Mft-Hz-pjw" id="mXd-3N-cDL"/>
                 <outlet property="movieDataView" destination="iRY-S3-1bU" id="slY-Ut-lhW"/>
+                <outlet property="movieTrailerView" destination="FOd-vF-OIx" id="9UF-4o-lfO"/>
                 <outlet property="screenShotsCollectionView" destination="g8j-iI-thI" id="fWe-bn-Kvo"/>
                 <outlet property="screenshotView" destination="Xez-Gn-GI0" id="BZW-f7-try"/>
                 <outlet property="synopsisLabel" destination="L0T-K8-FMU" id="nZa-qY-hnG"/>
@@ -34,24 +35,20 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="poH-zD-CcF">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="941.33333333333337"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="841.33333333333337"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GRb-NK-b9P">
-                                            <rect key="frame" x="0.0" y="16" width="393" height="909.33333333333337"/>
+                                            <rect key="frame" x="0.0" y="16" width="393" height="809.33333333333337"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FOd-vF-OIx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="200"/>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="200" id="P3g-Gp-1zt"/>
-                                                    </constraints>
+                                                <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="FOd-vF-OIx" customClass="MovieTrailerView" customModule="Genwin" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="100" translatesAutoresizingMaskIntoConstraints="NO" id="iRY-S3-1bU" customClass="MovieDataView" customModule="Genwin" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="200" width="393" height="100"/>
+                                                    <rect key="frame" x="0.0" y="100" width="393" height="100"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eha-h8-NQz">
-                                                    <rect key="frame" x="0.0" y="300" width="393" height="117"/>
+                                                    <rect key="frame" x="0.0" y="200" width="393" height="117"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="22d-kW-CYp">
                                                             <rect key="frame" x="8" y="16" width="377" height="85"/>
@@ -92,7 +89,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xez-Gn-GI0">
-                                                    <rect key="frame" x="0.0" y="417.00000000000006" width="393" height="254.66666666666669"/>
+                                                    <rect key="frame" x="0.0" y="317" width="393" height="254.66666666666663"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ihV-HG-8kX">
                                                             <rect key="frame" x="8" y="8" width="377" height="238.66666666666666"/>
@@ -104,7 +101,7 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="g8j-iI-thI">
-                                                                    <rect key="frame" x="0.0" y="29.666666666666629" width="377" height="200"/>
+                                                                    <rect key="frame" x="0.0" y="29.666666666666686" width="377" height="200"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="200" id="xB3-qG-59a"/>
@@ -135,7 +132,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mft-Hz-pjw">
-                                                    <rect key="frame" x="0.0" y="671.66666666666663" width="393" height="237.66666666666663"/>
+                                                    <rect key="frame" x="0.0" y="571.66666666666663" width="393" height="237.66666666666663"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V0V-1x-YVS">
                                                             <rect key="frame" x="8" y="8" width="377" height="221.66666666666666"/>
@@ -193,7 +190,7 @@
                 </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="xLI-Uh-u8T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZCQ-HW-Sgt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xLI-Uh-u8T" secondAttribute="trailing" id="b6F-oI-c3Z"/>

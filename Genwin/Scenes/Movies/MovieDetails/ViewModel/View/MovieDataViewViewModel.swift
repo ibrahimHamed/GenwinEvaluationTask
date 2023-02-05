@@ -20,11 +20,15 @@ class MovieDataViewViewModel {
         coverImage = movie.cover
         year = String(movie.year)
         genre = movie.genres?.joined(separator: ",") ?? ""
-        rating = String(movie.rating)
+        rating = String(movie.rating) + "/10"
         torrents = movie.torrents ?? []
     }
     
     func numberOfTorrent()-> Int {
         return torrents.count
+    }
+    
+    func getTorrentQuality (at indexPath: IndexPath) -> String {
+        return torrents[indexPath.row].quality
     }
 }

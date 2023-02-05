@@ -27,6 +27,7 @@ class BaseNav: UINavigationController {
             appearance.configureWithOpaqueBackground()
             appearance.titleTextAttributes = [.foregroundColor: AppColors.shared.whiteFontColor, .font: UIFont.boldSystemFont(ofSize: 16)]
             appearance.backgroundColor = AppColors.shared.grayNavigationColor
+            self.navigationBar.tintColor = .white
             UINavigationBar.appearance().standardAppearance = appearance
             UINavigationBar.appearance().scrollEdgeAppearance = appearance
             UINavigationBar.appearance().compactAppearance = appearance
